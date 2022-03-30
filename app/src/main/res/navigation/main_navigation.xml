@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/characters">
+
+    <fragment
+        android:id="@+id/characters"
+        android:name="com.voltaire.rickandmortyapi.Characters"
+        android:label="fragment_characters"
+        tools:layout="@layout/fragment_characters" />
+    <fragment
+        android:id="@+id/locations"
+        android:name="com.voltaire.rickandmortyapi.Locations"
+        android:label="fragment_locations"
+        tools:layout="@layout/fragment_locations" />
+    <fragment
+        android:id="@+id/episodes"
+        android:name="com.voltaire.rickandmortyapi.Episodes"
+        android:label="fragment_episodes"
+        tools:layout="@layout/fragment_episodes" />
+
+</navigation>
