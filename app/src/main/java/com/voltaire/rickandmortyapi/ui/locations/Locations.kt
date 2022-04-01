@@ -1,4 +1,4 @@
-package com.voltaire.rickandmortyapi
+package com.voltaire.rickandmortyapi.ui.locations
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

@@ -7,18 +7,35 @@
 
     <fragment
         android:id="@+id/characters"
-        android:name="com.voltaire.rickandmortyapi.Characters"
+        android:name="com.voltaire.rickandmortyapi.ui.characters.Characters"
         android:label="fragment_characters"
-        tools:layout="@layout/fragment_characters" />
+        tools:layout="@layout/fragment_characters" >
+        <action
+            android:id="@+id/action_characters_to_charactersDetailsFragment"
+            app:destination="@id/charactersDetailsFragment" />
+    </fragment>
+
+
     <fragment
         android:id="@+id/locations"
-        android:name="com.voltaire.rickandmortyapi.Locations"
+        android:name="com.voltaire.rickandmortyapi.ui.locations.Locations"
         android:label="fragment_locations"
         tools:layout="@layout/fragment_locations" />
     <fragment
         android:id="@+id/episodes"
-        android:name="com.voltaire.rickandmortyapi.Episodes"
+        android:name="com.voltaire.rickandmortyapi.ui.episodes.Episodes"
         android:label="fragment_episodes"
-        tools:layout="@layout/fragment_episodes" />
+        tools:layout="@layout/fragment_episodes" >
+    </fragment>
+
+    <fragment
+        android:id="@+id/charactersDetailsFragment"
+        android:name="com.voltaire.rickandmortyapi.ui.details.CharactersDetailsFragment"
+        android:label="character_detail_fragment"
+        tools:layout="@layout/character_detail_fragment" >
+        <argument
+            android:name="character"
+            app:argType="com.voltaire.rickandmortyapi.model.Character" />
+    </fragment>
 
 </navigation>

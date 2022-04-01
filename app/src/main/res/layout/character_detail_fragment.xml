@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:background="@color/purple_dark"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:gravity="center"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.details.CharactersDetailsFragment">
+
+
+
+   <LinearLayout
+       android:id="@+id/details_linear_layout"
+       android:layout_marginHorizontal="20dp"
+       android:background="@drawable/stroke_imageview"
+       android:orientation="vertical"
+       app:layout_constraintTop_toBottomOf="@id/detail_image_character"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content" >
+
+       <de.hdodenhof.circleimageview.CircleImageView
+           android:layout_gravity="center"
+           android:src="@drawable/ic_launcher_background"
+           android:id="@+id/detail_image_character"
+           android:layout_marginTop="25dp"
+           android:layout_width="250dp"
+           android:layout_height="250dp"
+           app:civ_border_width="2dp"
+           app:civ_border_color="@color/green_light" />
+
+       <TextView
+           android:id="@+id/detailName"
+           android:text="@string/characterName"
+           style="@style/TextInfo"/>
+
+       <TextView
+           android:id="@+id/detailId"
+           android:text="@string/cpf"
+           style="@style/TextInfo"/>
+
+       <TextView
+           android:id="@+id/detailSex"
+           android:text="@string/sexo"
+           style="@style/TextInfo"/>
+
+       <TextView
+           android:id="@+id/detailSpecie"
+           android:text="@string/specie"
+           style="@style/TextInfo"/>
+
+       <TextView
+           android:id="@+id/detailStatus"
+           android:text="@string/status"
+           style="@style/TextInfo"/>
+
+       <TextView
+           android:id="@+id/detailLocalization"
+           android:text="@string/localization"
+           style="@style/TextInfo"/>
+
+       <TextView
+           android:id="@+id/detailEpisodes"
+           android:text="@string/episodes"
+           style="@style/TextInfo"/>
+
+       <com.google.android.material.floatingactionbutton.FloatingActionButton
+           android:layout_margin="5dp"
+           android:backgroundTint="@color/green_light"
+           app:layout_constraintTop_toBottomOf="@id/details_linear_layout"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:src="@drawable/arrow_back" />
+
+   </LinearLayout>
+
+</LinearLayout>
