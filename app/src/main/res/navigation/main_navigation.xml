@@ -22,10 +22,10 @@
         android:label="fragment_locations"
         tools:layout="@layout/fragment_locations" />
     <fragment
-        android:id="@+id/episodes"
-        android:name="com.voltaire.rickandmortyapi.ui.episodes.Episodes"
+        android:id="@+id/settings"
+        android:name="com.voltaire.rickandmortyapi.ui.settings.Settings"
         android:label="fragment_episodes"
-        tools:layout="@layout/fragment_episodes" >
+        tools:layout="@layout/fragment_settings" >
     </fragment>
 
     <fragment

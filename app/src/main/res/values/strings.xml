@@ -11,4 +11,12 @@
     <string name="status">Status : %1$s</string>
     <string name="localization">Localização : %1$s</string>
     <string name="episodes">Episódios : %1$s</string>
+    <string name="filtros">Filters</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="unknown">Unknown</string>
+    <string name="live">Live</string>
+    <string name="dead">Dead</string>
+    <string name="aplicarfiltro">Apply Filter</string>
+    <string name="clearFilters">CLEAR FILTERS</string>
 </resources>
