@@ -25,12 +25,9 @@
 ### Habilidades :star:
 - Requisição web com Retrofit;
 - Arquitetura MVVM;
-- Coroutines;
-- Suspend Functions;
-- Lógica de programação;
+- Coroutines e suspend functions;
 - Navigation Component;
 - Bottom Navigation;
- 
 
 ### Tecnologias :rocket:
 
