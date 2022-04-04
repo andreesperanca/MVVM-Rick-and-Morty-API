@@ -1,4 +1,4 @@
-<h1 align="center">MVVM-Rick and Morty API</h1>
+<h1 align="center">MVVM Rick and Morty API</h1>
 
 
 <h1 align="center">
