@@ -2,6 +2,7 @@ package com.voltaire.rickandmortyapi.api
 
 import com.voltaire.rickandmortyapi.model.Character
 import com.voltaire.rickandmortyapi.model.CharacterList
+import retrofit2.Callback
 import retrofit2.http.GET
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

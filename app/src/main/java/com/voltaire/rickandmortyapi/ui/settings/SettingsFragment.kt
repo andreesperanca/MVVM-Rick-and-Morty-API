@@ -10,7 +10,7 @@ import com.voltaire.rickandmortyapi.R
 import com.voltaire.rickandmortyapi.databinding.FragmentSettingsBinding
 
 
-class Settings : Fragment() {
+class SettingsFragment : Fragment() {
 
     private lateinit var binding : FragmentSettingsBinding
 

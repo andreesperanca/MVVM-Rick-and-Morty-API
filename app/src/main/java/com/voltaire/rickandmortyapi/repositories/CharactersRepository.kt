@@ -20,5 +20,6 @@ class CharactersRepository(private val retrofitService: RetrofitService) {
     }
     suspend fun getCharacterName (name : String) : CharacterList {
         return retrofitService.getCharacterName(name)
+
     }
 }

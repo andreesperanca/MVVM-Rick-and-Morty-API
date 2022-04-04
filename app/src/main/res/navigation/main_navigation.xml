@@ -3,27 +3,30 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_navigation"
-    app:startDestination="@id/characters">
+    app:startDestination="@id/home">
 
     <fragment
         android:id="@+id/characters"
-        android:name="com.voltaire.rickandmortyapi.ui.characters.Characters"
+        android:name="com.voltaire.rickandmortyapi.ui.characters.CharactersFragment"
         android:label="fragment_characters"
         tools:layout="@layout/fragment_characters" >
         <action
             android:id="@+id/action_characters_to_charactersDetailsFragment"
             app:destination="@id/charactersDetailsFragment" />
+        <argument android:name="filterOn"
+            app:argType="boolean"
+            android:defaultValue="false" />
     </fragment>
 
+    <fragment
+        android:id="@+id/home"
+        android:name="com.voltaire.rickandmortyapi.ui.home.Home"
+        android:label="fragment_locations"
+        tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/locations"
-        android:name="com.voltaire.rickandmortyapi.ui.locations.Locations"
-        android:label="fragment_locations"
-        tools:layout="@layout/fragment_locations" />
-    <fragment
         android:id="@+id/settings"
-        android:name="com.voltaire.rickandmortyapi.ui.settings.Settings"
+        android:name="com.voltaire.rickandmortyapi.ui.settings.SettingsFragment"
         android:label="fragment_episodes"
         tools:layout="@layout/fragment_settings" >
     </fragment>
@@ -36,6 +39,17 @@
         <argument
             android:name="character"
             app:argType="com.voltaire.rickandmortyapi.model.Character" />
+        <action
+            android:id="@+id/action_charactersDetailsFragment_to_characters"
+            app:destination="@id/characters" />
+        <argument
+            android:name="filter_gender"
+            app:argType="string"
+            android:defaultValue="-1" />
+        <argument
+            android:name="filter_status"
+            app:argType="string"
+            android:defaultValue='-1' />
     </fragment>
 
 </navigation>

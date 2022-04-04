@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.voltaire.rickandmortyapi.R
 import com.voltaire.rickandmortyapi.model.Character
-import com.voltaire.rickandmortyapi.ui.characters.CharactersDirections
+import com.voltaire.rickandmortyapi.ui.characters.CharactersFragmentDirections
 
 
 class CharactersAdapter() : RecyclerView.Adapter<CharactersAdapter.CharactersViewHolder>() {
@@ -28,7 +28,7 @@ class CharactersAdapter() : RecyclerView.Adapter<CharactersAdapter.CharactersVie
         holder.bind(listCharacters[position])
 
         holder.itemView.setOnClickListener {
-            val action = CharactersDirections.actionCharactersToCharactersDetailsFragment((listCharacters[position]))
+            val action = CharactersFragmentDirections.actionCharactersToCharactersDetailsFragment((listCharacters[position]))
             it.findNavController().navigate(action)
 
         }

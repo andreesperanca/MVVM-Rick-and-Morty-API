@@ -3,7 +3,7 @@
     <!-- TODO: Remove or change this placeholder text -->
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="categoria">Category</string>
+    <string name="categoria">Categoria</string>
     <string name="characterName">Nome : %1$s</string>
     <string name="cpf">CPF : %1$s</string>
     <string name="sexo">Sexo : %1$s</string>
@@ -11,12 +11,17 @@
     <string name="status">Status : %1$s</string>
     <string name="localization">Localização : %1$s</string>
     <string name="episodes">Episódios : %1$s</string>
-    <string name="filtros">Filters</string>
-    <string name="male">Male</string>
-    <string name="female">Female</string>
-    <string name="unknown">Unknown</string>
-    <string name="live">Live</string>
-    <string name="dead">Dead</string>
-    <string name="aplicarfiltro">Apply Filter</string>
-    <string name="clearFilters">CLEAR FILTERS</string>
+    <string name="filtros">Filtros</string>
+    <string name="male">Masculino</string>
+    <string name="female">Feminino</string>
+    <string name="unknown">Desconhecido</string>
+    <string name="live">Vivo</string>
+    <string name="dead">Morto</string>
+    <string name="aplicarfiltro">Aplicar Filtros</string>
+    <string name="clearFilters">Limpar Filtros</string>
+    <string name="welcome">Bem-vindo ao aplicativo. Aqui você pode encontrar informações úteis sobre qualquer personagem da série Rick And Morty.</string>
+    <string name="settings">Configurações</string>
+    <string name="nightmode">Modo escuro</string>
+    <string name="Gendercharacters">Gênero do Personagem</string>
+    <string name="statuspersonagem">Estado do Personagem</string>
 </resources>

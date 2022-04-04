@@ -10,11 +10,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.RadioButton
 import android.widget.RadioGroup
 import android.widget.Toast
 import androidx.appcompat.widget.SearchView
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.voltaire.rickandmortyapi.R
@@ -24,9 +26,12 @@ import com.voltaire.rickandmortyapi.databinding.FragmentCharactersBinding
 import com.voltaire.rickandmortyapi.repositories.CharactersRepository
 import com.voltaire.rickandmortyapi.ui.characters.viewmodel.CharactersViewModel
 import com.voltaire.rickandmortyapi.ui.characters.viewmodel.CharactersViewModelFactory
+import com.voltaire.rickandmortyapi.ui.details.CharactersDetailsFragmentArgs
+import retrofit2.Call
+import retrofit2.Response
 
 
-class Characters : Fragment() {
+class CharactersFragment : Fragment() {
 
     private val viewModel: CharactersViewModel by activityViewModels {
         CharactersViewModelFactory(
@@ -48,10 +53,12 @@ class Characters : Fragment() {
     ): View? {
         binding = FragmentCharactersBinding.inflate(inflater)
         return binding.root
+
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
 
         viewModel.listCharacters.observe(viewLifecycleOwner) {
             adapter.setCharacters(it)
@@ -73,25 +80,39 @@ class Characters : Fragment() {
 
             view.findViewById<Button>(R.id.applyfilter).setOnClickListener {
 
+                val liveStatus = view.findViewById<RadioButton>(R.id.radio_live).isChecked
+                val deadStatus = view.findViewById<RadioButton>(R.id.radio_dead).isChecked
+                val unknownStatus =
+                    view.findViewById<RadioButton>(R.id.radio_status_unknown).isChecked
+                val maleGender = view.findViewById<RadioButton>(R.id.radio_male).isChecked
+                val femaleGender = view.findViewById<RadioButton>(R.id.radio_female).isChecked
+                val unknownGender =
+                    view.findViewById<RadioButton>(R.id.radio_gender_unknown).isChecked
+
                 val radio_group_gender =
                     view.findViewById<RadioGroup>(R.id.radio_group_gender).checkedRadioButtonId
                 val radio_group_status =
                     view.findViewById<RadioGroup>(R.id.radio_group_status).checkedRadioButtonId
 
                 if (radio_group_gender != -1) {
-                    filter_gender = when (radio_group_gender) {
-                        2131231248 -> "male"
-                        2131231245 -> "female"
-                        2131231246 -> "unknown"
-                        else -> "male"
+                    if (maleGender) {
+                        filter_gender = "male"
+                    }
+                    filter_gender = if (femaleGender) {
+                        "female"
+                    } else {
+                        "unknown"
                     }
                 }
                 if (radio_group_status != -1) {
-                    filter_status = when (radio_group_status) {
-                        2131231247 -> "live"
-                        2131231244 -> "dead"
-                        2131231249 -> "unknown"
-                        else -> "live"
+                    if (liveStatus) {
+                        filter_status = "live"
+                    }
+
+                    if (deadStatus) {
+                        filter_status = "dead"
+                    } else {
+                        filter_status = "unknown"
                     }
                 }
 
@@ -117,21 +138,22 @@ class Characters : Fragment() {
 
         binding.txtClearFilters.setOnClickListener {
             viewModel.getCharacters(1, 2)
-            binding.txtClearFilters.visibility = View.INVISIBLE
             filter_status = ""
             filter_gender = ""
         }
+
 
     }
 
     private fun getName() {
 
-        binding.searchCharacters.setOnQueryTextListener(object :  SearchView.OnQueryTextListener,
+        binding.searchCharacters.setOnQueryTextListener(object : SearchView.OnQueryTextListener,
             android.widget.SearchView.OnQueryTextListener {
 
             override fun onQueryTextSubmit(query: String?): Boolean {
                 viewModel.getCharacterName(query.toString())
-                binding.txtClearFilters.visibility = View.VISIBLE
+
+
                 return true
             }
 
@@ -140,12 +162,10 @@ class Characters : Fragment() {
             }
         })
     }
-
     override fun onAttach(context: Context) {
         super.onAttach(context)
         viewModel.getCharacters(1, 2)
     }
-
 }
 
 

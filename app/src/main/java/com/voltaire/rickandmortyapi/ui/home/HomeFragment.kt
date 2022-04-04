@@ -1,23 +1,23 @@
-package com.voltaire.rickandmortyapi.ui.locations
+package com.voltaire.rickandmortyapi.ui.home
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.voltaire.rickandmortyapi.databinding.FragmentLocationsBinding
+import com.voltaire.rickandmortyapi.databinding.FragmentHomeBinding
 
 
-class Locations : Fragment() {
+class Home : Fragment() {
 
-    private lateinit var binding : FragmentLocationsBinding
+    private lateinit var binding : FragmentHomeBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentLocationsBinding.inflate(inflater)
+        binding = FragmentHomeBinding.inflate(inflater)
         return binding.root
     }
 

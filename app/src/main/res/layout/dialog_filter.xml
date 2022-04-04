@@ -9,7 +9,7 @@
     android:padding="16dp">
 
     <LinearLayout
-        android:padding="16dp"
+        android:padding="15dp"
         android:background="@drawable/stroke_imageview"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -31,7 +31,7 @@
         app:layout_constraintBottom_toTopOf="@+id/gender_linear_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Gender Character"/>
+        android:text="@string/Gendercharacters"/>
 
     <RadioGroup
         android:orientation="horizontal"
@@ -72,7 +72,7 @@
         app:layout_constraintTop_toBottomOf="@+id/gender_linear_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Status Character"/>
+        android:text="@string/statuspersonagem"/>
 
     <RadioGroup
         android:id="@+id/radio_group_status"
