@@ -41,8 +41,6 @@
 - [x] Filtrar personagens por status e gênero;
 - [x] Filtrar personagens por nome;
 - [x] Ícone do App;
-- [ ] Modo escuro;
-
 
 ### Autor
 
