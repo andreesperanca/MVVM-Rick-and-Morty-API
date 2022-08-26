@@ -6,11 +6,6 @@
   <img style="border-radius: 50%;" src="./assets/filtros1.png" width="250px;" alt=""/>
   </h1>
   
-  <h1 align="center">
-   <img style="border-radius: 50%;" src="./assets/rickandmortyGif1.gif" width="250px;" alt=""/>
-  </h1>
-
-
 <h1 align="center">
    <img style="border-radius: 50%;" src="./assets/gifGame.gif" width="250px;" alt=""/>
 </h1>
