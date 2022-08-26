@@ -25,13 +25,6 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/settings"
-        android:name="com.voltaire.rickandmortyapi.ui.settings.SettingsFragment"
-        android:label="fragment_episodes"
-        tools:layout="@layout/fragment_settings" >
-    </fragment>
-
-    <fragment
         android:id="@+id/charactersDetailsFragment"
         android:name="com.voltaire.rickandmortyapi.ui.details.CharactersDetailsFragment"
         android:label="character_detail_fragment"

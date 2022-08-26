@@ -13,8 +13,6 @@ class CharactersViewModel constructor(private val repository: CharactersReposito
 
     var listCharacters = MutableLiveData<List<Character>>()
 
-
-
     fun getCharacters(page: Int, page2: Int) {
         viewModelScope.launch {
             val characters = repository.getCharacters(page)
