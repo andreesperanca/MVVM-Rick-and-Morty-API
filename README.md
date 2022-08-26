@@ -2,9 +2,6 @@
 
 
 <h1 align="center">
-  <img style="border-radius: 50%;" src="./assets/splash1.png" width="250px;" alt=""/>
-  <img style="border-radius: 50%;" src="./assets/home1.png" width="250px;" alt=""/>
-  <img style="border-radius: 50%;" src="./assets/configurações1.png" width="250px;" alt=""/>
   <img style="border-radius: 50%;" src="./assets/personagens1.png" width="250px;" alt=""/>
   <img style="border-radius: 50%;" src="./assets/filtros1.png" width="250px;" alt=""/>
   </h1>
